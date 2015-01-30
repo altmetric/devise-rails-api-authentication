@@ -1,5 +1,5 @@
 require 'devise_rails_api_authentication/version'
+require 'devise_rails_api_authentication/authenticatable'
 
 module DeviseRailsApiAuthentication
-  # Your code goes here...
 end
