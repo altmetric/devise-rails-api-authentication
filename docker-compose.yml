@@ -1,0 +1,6 @@
+dev:
+  build: .
+  volumes:
+    - lib:/app/lib
+    - spec:/app/spec
+    - Gemfile:/app/Gemfile
