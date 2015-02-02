@@ -1,6 +1,11 @@
 # DeviseRailsApiAuthentication
 
-TODO: Write a gem description
+Token-based rails-api authentication with Devise.
+
+Devise does not support [token-based authentication anymore](https://github.com/plataformatec/devise/issues/2739)
+and [devise_token_auth](https://github.com/lynndylanhurley/devise_token_auth) does not work with rails-api.
+
+It's basically [this gist](https://gist.github.com/josevalim/fb706b1e933ef01e4fb6) wrapped as a gem with specs.
 
 ## Installation
 
@@ -20,7 +25,41 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First of all make sure you have a model class with `authentication_token` and `email` fields.
+Otherwise create a migration, here's an example for a `User` model and ActiveRecord:
+
+```ruby
+class AddDeviseToUsers < ActiveRecord::Migration
+  def self.change
+    add_column :users, :email, :text, null: false, default: ''
+    add_index :users, :email, unique: true
+    add_column :users, :authentication_token, :text, null: false, default: ''
+    add_index :users, :authentication_token, unique: true
+  end
+end
+```
+
+Next add the following lines to ApplicationController - see [source](https://github.com/altmetric/devise-rails-api-authentication/blob/master/lib/devise_rails_api_authentication/context.rb):
+
+```ruby
+include DeviseRailsApiAuthentication::Context
+
+private def user
+  User.where(email: user_email).first
+end
+```
+
+and the following line to your model class - see [source](https://github.com/altmetric/devise-rails-api-authentication/blob/master/lib/devise_rails_api_authentication/authenticatable.rb):
+
+```ruby
+include DeviseRailsApiAuthentication::Authenticatable
+```
+
+Once you run the migration, create a new user, and boot up your app, just do:
+
+```shell
+curl -H "X_USER_EMAIL: <email>" -H "X_USER_TOKEN: <token>" http://<where-your-app-lives>
+```
 
 ## Contributing
 
