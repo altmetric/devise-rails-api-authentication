@@ -11,6 +11,7 @@ ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: ':memory:'
 ActiveRecord::Base.connection.execute <<-SQL
   CREATE TABLE users (
     id INTEGER,
+    email TEXT,
     authentication_token TEXT
   )
 SQL

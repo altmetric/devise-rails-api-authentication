@@ -1,5 +1,6 @@
 require 'devise_rails_api_authentication/version'
 require 'devise_rails_api_authentication/authenticatable'
+require 'devise_rails_api_authentication/context'
 
 module DeviseRailsApiAuthentication
 end
