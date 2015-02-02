@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email = %w(jakub@altmetric.com matt@matt-m.co.uk paul@altmetric.com)
   spec.summary = %q{Rails-api authentication using devise}
   spec.homepage = ''
-  spec.license = 'MIT?'
+  spec.license = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0")
   spec.executables = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
