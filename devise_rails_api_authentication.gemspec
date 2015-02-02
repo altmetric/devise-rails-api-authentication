@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version = DeviseRailsApiAuthentication::VERSION
   spec.authors = ['Jakub Pawlowicz', 'Matthew MacLeod', 'Paul Mucur']
   spec.email = %w(jakub@altmetric.com matt@matt-m.co.uk paul@altmetric.com)
-  spec.summary = %q{Rails-api authentication using devise}
+  spec.summary = %q{Token-based rails-api authentication with Devise}
   spec.homepage = ''
   spec.license = 'MIT'
 
