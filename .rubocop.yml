@@ -1,0 +1,11 @@
+AllCops:
+  Exclude:
+    - Gemfile
+    - devise_rails_api_authentication.gemspec
+    - spec/**/*
+Style/MultilineBlockChain:
+  Enabled: false
+Style/MultilineOperationIndentation:
+  Enabled: false
+Documentation:
+  Enabled: false
