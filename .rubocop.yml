@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - Gemfile
+    - Guardfile
     - devise_rails_api_authentication.gemspec
     - spec/**/*
 Style/MultilineBlockChain:

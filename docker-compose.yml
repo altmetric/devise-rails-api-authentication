@@ -4,3 +4,4 @@ dev:
     - lib:/app/lib
     - spec:/app/spec
     - Gemfile:/app/Gemfile
+    - Guardfile:/app/Guardfile
