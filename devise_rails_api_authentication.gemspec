@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Jakub Pawlowicz', 'Matthew MacLeod', 'Paul Mucur']
   spec.email = %w(jakub@altmetric.com matt@matt-m.co.uk paul@altmetric.com)
   spec.summary = %q{Token-based rails-api authentication with Devise}
-  spec.homepage = ''
+  spec.homepage = 'https://github.com/altmetric/devise-rails-api-authentication'
   spec.license = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0")
