@@ -42,17 +42,21 @@ end
 Next add the following lines to ApplicationController - see [source](https://github.com/altmetric/devise-rails-api-authentication/blob/master/lib/devise_rails_api_authentication/context.rb):
 
 ```ruby
-include DeviseRailsApiAuthentication::Context
+class ApplicationController
+  include DeviseRailsApiAuthentication::Context
 
-private def user
-  User.where(email: user_email).first
+  private def user
+    User.where(email: user_email).first
+  end
 end
 ```
 
 and the following line to your model class - see [source](https://github.com/altmetric/devise-rails-api-authentication/blob/master/lib/devise_rails_api_authentication/authenticatable.rb):
 
 ```ruby
-include DeviseRailsApiAuthentication::Authenticatable
+class YourUserModel
+  include DeviseRailsApiAuthentication::Authenticatable
+end
 ```
 
 Once you run the migration, create a new user, and boot up your app, just do:
