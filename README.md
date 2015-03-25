@@ -72,3 +72,7 @@ curl -H "X_USER_EMAIL: <email>" -H "X_USER_TOKEN: <token>" http://<where-your-ap
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## License
+
+This project is released under the [MIT license](https://github.com/altmetric/devise-rails-api-authentication/blob/master/LICENSE.txt).
