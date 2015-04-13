@@ -1,4 +1,4 @@
-# DeviseRailsApiAuthentication
+# DeviseRailsApiAuthentication [![Build Status](https://travis-ci.org/altmetric/devise-rails-api-authentication.svg?branch=master)](https://travis-ci.org/altmetric/devise-rails-api-authentication)
 
 Token-based rails-api authentication with Devise.
 
