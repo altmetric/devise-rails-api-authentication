@@ -1,7 +1,5 @@
 dev:
   build: .
   volumes:
-    - lib:/app/lib
-    - spec:/app/spec
-    - Gemfile:/app/Gemfile
-    - Guardfile:/app/Guardfile
+    - ./lib:/app/lib
+    - ./spec:/app/spec
