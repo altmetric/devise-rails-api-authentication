@@ -6,7 +6,7 @@ module DeviseRailsApiAuthentication
 
     included do
       include Devise::Controllers::Helpers
-      include ActionController::MimeResponds
+      include ActionController::RespondWith
       before_action :authenticate_user_from_token!
     end
 
