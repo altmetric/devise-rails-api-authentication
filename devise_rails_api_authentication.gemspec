@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'actionpack', '< 5.3'
-  spec.add_dependency 'devise', '~> 3.5'
+  spec.add_dependency 'devise', '~> 4.3'
   spec.add_dependency 'responders', '~> 2.4'
 
   spec.add_development_dependency 'bundler', '~> 1.6'
