@@ -18,7 +18,7 @@ module DeviseRailsApiAuthentication
     def generate_authentication_token
       loop do
         token = Devise.friendly_token
-        break token if self.class.where(authentication_token: token).count == 0
+        break token if self.class.where(authentication_token: token).count.zero?
       end
     end
   end

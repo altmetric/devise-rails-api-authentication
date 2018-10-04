@@ -34,7 +34,7 @@ module DeviseRailsApiAuthentication
     end
 
     def user
-      fail NotImplementedError
+      raise NotImplementedError
     end
   end
 end
